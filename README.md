@@ -1,5 +1,9 @@
 # Zarf Init Package for Longhorn
 
+> [!NOTE]  
+> This is a [fork]() which bridges a gap in the current reference for building the longhorn zarf init package. It uses zarf as a git submodule and a zarf config file containing the agent and injector data.
+
+
 ![Dash Days](https://img.shields.io/badge/Dash%20Days-best--project-blueviolet)
 [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/defenseunicorns/zarf-init-longhorn/badge)](https://api.securityscorecards.dev/projects/github.com/defenseunicorns/zarf-init-longhorn)
 
@@ -39,3 +43,9 @@ zarf package create . --set AGENT_IMAGE_TAG=$(zarf version)
 zarf init --confirm
 ```
 > :warning: Different configuration options may be required depending on your environment
+
+### Connecting an NFS backupstore
+```yaml
+defaultSettings:
+  backupTarget: "nfs://192.168.0.10:/"
+```

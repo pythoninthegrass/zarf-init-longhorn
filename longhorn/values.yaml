@@ -25,44 +25,44 @@ image:
   longhorn:
     engine:
       repository: ###ZARF_REGISTRY###/longhornio/longhorn-engine
-      tag: v1.5.1
+      tag: v1.6.2
     manager:
       repository: ###ZARF_REGISTRY###/longhornio/longhorn-manager
-      tag: v1.5.1
+      tag: v1.6.2
     ui:
       repository: ###ZARF_REGISTRY###/longhornio/longhorn-ui
-      tag: v1.5.1
+      tag: v1.6.2
     instanceManager:
       repository: ###ZARF_REGISTRY###/longhornio/longhorn-instance-manager
-      tag: v1.5.1
+      tag: v1.6.2
     shareManager:
       repository: ###ZARF_REGISTRY###/longhornio/longhorn-share-manager
-      tag: v1.5.1
+      tag: v1.6.2
     backingImageManager:
       repository: ###ZARF_REGISTRY###/longhornio/backing-image-manager
-      tag: v1.5.1
+      tag: v1.6.2
     supportBundleKit:
       repository: ###ZARF_REGISTRY###/longhornio/support-bundle-kit
-      tag: v0.0.25
+      tag: v0.0.37
   csi:
     attacher:
       repository: ###ZARF_REGISTRY###/longhornio/csi-attacher
-      tag: v4.2.0
+      tag: v4.5.1
     provisioner:
       repository: ###ZARF_REGISTRY###/longhornio/csi-provisioner
-      tag: v3.4.1
+      tag: v3.6.4
     nodeDriverRegistrar:
       repository: ###ZARF_REGISTRY###/longhornio/csi-node-driver-registrar
-      tag: v2.7.0
+      tag: v2.9.2
     resizer:
       repository: ###ZARF_REGISTRY###/longhornio/csi-resizer
-      tag: v1.7.0
+      tag: v1.10.1
     snapshotter:
       repository: ###ZARF_REGISTRY###/longhornio/csi-snapshotter
-      tag: v6.2.1
+      tag: v6.3.4
     livenessProbe:
       repository: ###ZARF_REGISTRY###/longhornio/livenessprobe
-      tag: v2.9.0
+      tag: v2.12.0
   pullPolicy: IfNotPresent
 
 service:
