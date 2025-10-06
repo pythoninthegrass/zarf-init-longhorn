@@ -1,5 +1,5 @@
-* @Racer159 @Noxsios @jeff-mccoy @lucasrod16 @benmountjoy111 @docandrew @bburky
+* @mission-focused/mission-maintainers
 
 # Additional privileged files
-/CODEOWNERS @jeff-mccoy @mikevanhemert @austenbryan
-/LICENSE @jeff-mccoy @austenbryan
+/CODEOWNERS @brandtkeller
+/LICENSE @brandtkeller
