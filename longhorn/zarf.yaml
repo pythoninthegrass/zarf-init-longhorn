@@ -2,7 +2,7 @@ kind: ZarfPackageConfig
 metadata:
   name: longhorn
   description: Example package for Longhorn cloud native distributed block storage for Kubernetes
-  version: 1.4.0
+  version: 1.9.1
 components:
   # - name: longhorn-environment-check
   #   required: true
