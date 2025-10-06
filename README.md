@@ -1,8 +1,5 @@
 # Zarf Init Package for Longhorn
 
-![Dash Days](https://img.shields.io/badge/Dash%20Days-best--project-blueviolet)
-[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/defenseunicorns/zarf-init-longhorn/badge)](https://api.securityscorecards.dev/projects/github.com/defenseunicorns/zarf-init-longhorn)
-
 > :warning: EXPERIMENTAL!  This package is currently in an experimental state.
 
 Zarf eliminates the [complexity of air gap software delivery](https://www.itopstimes.com/contain/air-gap-kubernetes-considerations-for-running-cloud-native-applications-without-the-cloud/) for Kubernetes clusters and cloud-native workloads using a declarative packaging strategy to support DevSecOps in offline and semi-connected environments.
@@ -21,11 +18,27 @@ This repository contains the Zarf init package for Longhorn that creates a longh
 
 ### Prerequisites
 
-- Zarf CLI (version >= `v0.30.1`)
+- Zarf CLI (version >= `v0.62.0`)
     - <https://docs.zarf.dev/docs/getting-started>
 
 - Connection to a host (or cluster) configured to run longhorn
     - <https://longhorn.io/docs/1.5.1/deploy/install/#installation-requirements>
+
+## Quick Start
+
+```bash
+zarf package pull oci://ghcr.io/brandtkeller/zarf/zarf-init-longhorn/init:v0.62.0
+```
+
+```bash
+zarf init --confirm
+```
+
+Once the init package is deployed, the Longhorn storage class will be created. The dashboard can be accessed via:
+
+```bash
+zarf connect longhorn-ui
+```
 
 ### Create the Zarf init package
 
@@ -39,3 +52,9 @@ zarf package create . --set AGENT_IMAGE_TAG=$(zarf version)
 zarf init --confirm
 ```
 > :warning: Different configuration options may be required depending on your environment
+
+### Connecting an NFS backupstore
+```yaml
+defaultSettings:
+  backupTarget: "nfs://192.168.0.10:/"
+```
